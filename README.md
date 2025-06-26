@@ -1,12 +1,13 @@
-# Advanced Algorithms in Competitive Programming – SoS 2025
-This repo contains my implementations, templates, and notes from the 8-week Summer of Science project (IIT Bombay) under mentor Nirav Bhattad.
+# Mastering CP — SOC 2025
 
-I am learning advanced algorithms and solving problems from Codeforces, CSES, and other CP platforms. This includes:
+This repository is part of my **Seasons of Code (Project ID: 35)** under the guidance of mentors Sameer, Jatsya, Harsh, and Abhi.
 
-- Segment Trees
-- Graph Algorithms
-- FFT, Suffix Structures
-- KMP, Mo’s Algorithm
-- My chosen advanced topic: [TBD]
+### 📆 Midterm Progress (Weeks 1–4)
+- Week 1: C++ STL, Sorting & Searching
+- Week 2: Greedy Algorithms, Bit Manipulation
+- Week 3: Number Theory, Modular Arithmetic, Sieve, Combinatorics
+- Week 4: Dynamic Programming (all 5 forms)
+
+More updates and detailed documentation will be added soon.
 
 
