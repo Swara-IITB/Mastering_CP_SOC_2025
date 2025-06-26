@@ -2,47 +2,35 @@
 using namespace std;
 typedef long long ll;
 int main(){
-    ll n,m,x,y,ans=0;
+    ll n,m,ans=1;
     cin >> n >> m;
-    vector<ll> pos(n), a(n);
-    for(ll i =0 ; i< n; i++){
-        cin >> a[i];
-        pos[a[i]] = i;
+    vector<ll> arr(n);
+    vector<ll> pos(n);
+    for(ll i=0; i<n; i++){
+        cin >> arr[i];
+        pos[arr[i]-1] = i;
     }
-    for(ll i=0; i<n-1; i++){
-        if(pos[i+1]<pos[i]) ans++;
+    for(ll i=0; i<n-1;i++){
+        if(pos[i]>pos[i+1]) ans++; 
     }
     while(m--){
-        cin >> x >> y;
-        x--; y--;
-        if(!a[x]){
-            if(pos[a[x]-1] > pos[a[x]]) ans--;
-        }
-        if(a[x] != n-1){
-            if(pos[a[x]+1] < pos[a[x]]) ans--;
-        }
-        if(!a[y]){
-            if(pos[a[y]-1] > pos[a[y]]) ans--;
-        }
-        if(a[y] != n-1){
-            if(pos[a[y]+1] < pos[a[y]]) ans--;
-        }
-        pos[a[x]] = y;
-        pos[a[y]] = x;
-        swap(a[x],a[y]);
-        if(!a[x]){
-            if(pos[a[x]-1] > pos[a[x]]) ans--;
-        }
-        if(a[x] != n-1){
-            if(pos[a[x]+1] < pos[a[x]]) ans--;
-        }
-        if(!a[y]){
-            if(pos[a[y]-1] > pos[a[y]]) ans--;
-        }
-        if(a[y] != n-1){
-            if(pos[a[y]+1] < pos[a[y]]) ans--;
-        }
-
+        ll x,y;
+        cin >> x >> y; x--; y--;
+        ll a = min(x,y), b= max(x,y);
+        
+        
+                if(pos[arr[a]+1] < pos[arr[a]]) ans--;
+                if(arr[a]!=0){if(pos[arr[a]-1] > pos[arr[a]]) ans--;}
+                if(arr[b]!=n-1){if(pos[arr[b]+1] < pos[arr[b]]) ans--;}
+                if(pos[arr[b]-1] > pos[arr[b]]) ans--;
+                if(pos[arr[a]+1] < pos[arr[b]]) ans++;
+                if(arr[a]!=0){if(pos[arr[a]-1] > pos[arr[b]]) ans++;}
+                if(arr[b]!=n-1){if(pos[arr[b]+1] < pos[arr[a]]) ans++;}
+                if(pos[arr[b]-1] > pos[arr[a]]) ans++;
+            
+        
         cout << ans << '\n';
+        swap(arr[a],arr[b]);
+        swap(pos[arr[a]],pos[arr[b]]);
     }
 }
