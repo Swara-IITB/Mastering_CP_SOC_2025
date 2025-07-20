@@ -1,12 +1,13 @@
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long ll;
-
-ll gcd(ll u, ll v){ 
-    ll a = max(u,v), b = min(u,v);
-    if(!b) return abs(a);
-    return gcd(b,a%b);
-}
+typedef vector<ll> vll;
+typedef map<ll,ll> mll;
+typedef set<ll> sll;
+#define ain(a,n) for(ll lambda=0; lambda<n; lambda++){cin >> a[lambda];}
+#define aout(a,n) for(ll _=0; _<n; _++){cout << a[_] << ' ';}
+#define F first
+#define S second 
 
 ll modpow(ll x, ll n, ll m){
     if(n==0) return 1;
@@ -23,6 +24,6 @@ int main(){
     ll t;
     cin >> t;
     while(t--){
-        
+
     }
 }

@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.tex": "latex",
+        "random": "cpp",
+        "iostream": "cpp",
+        "tuple": "cpp"
+    }
+}
